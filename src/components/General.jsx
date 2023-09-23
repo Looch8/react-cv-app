@@ -11,6 +11,7 @@ function General({ value, updateName }) {
 		e.preventDefault();
 		// Call the updateName function to update name in App component
 		updateName(name);
+		setName(""); // Makes the input field empty after submitting
 	};
 
 	return (

@@ -10,6 +10,7 @@ function Education({ updateEducation }) {
 	const handleSubmit = (e) => {
 		e.preventDefault();
 		updateEducation(education);
+		setEducation(""); // Makes the input field empty after submitting
 	};
 	return (
 		<>

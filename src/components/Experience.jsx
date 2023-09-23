@@ -10,6 +10,7 @@ function Experience({ updateExperience }) {
 	const handleSubmit = (e) => {
 		e.preventDefault();
 		updateExperience(experience);
+		setExperience(""); // Makes the input field empty after submitting
 	};
 	return (
 		<>
