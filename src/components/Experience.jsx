@@ -1,5 +1,32 @@
-function Experience() {
-	return <>Experience</>;
+import { useState } from "react";
+
+function Experience({ updateExperience }) {
+	const [experience, setExperience] = useState("");
+
+	const handleChange = (e) => {
+		setExperience(e.target.value);
+	};
+
+	const handleSubmit = (e) => {
+		e.preventDefault();
+		updateExperience(experience);
+	};
+	return (
+		<>
+			<label htmlFor="experience">Experience: </label>
+			<input
+				type="text"
+				id="experience"
+				name="experience"
+				value={experience}
+				onChange={handleChange}
+			/>
+			<button className="btn" type="submit" onClick={handleSubmit}>
+				{" "}
+				Submit{" "}
+			</button>
+		</>
+	);
 }
 
 export default Experience;

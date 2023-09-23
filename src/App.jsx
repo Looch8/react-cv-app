@@ -5,10 +5,20 @@ import { useState } from "react";
 
 function App() {
 	const [name, setName] = useState("");
+	const [experience, setExperience] = useState("");
+	const [education, setEducation] = useState("");
 
 	// Define function to update the name state in App.jsx
 	const updateName = (newName) => {
 		setName(newName);
+	};
+
+	const updateExperience = (newExperience) => {
+		setExperience(newExperience);
+	};
+
+	const updateEducation = (newEducation) => {
+		setEducation(newEducation);
 	};
 
 	return (
@@ -19,14 +29,22 @@ function App() {
 					<General value={name} updateName={updateName} />
 				</section>
 				<section className="experience">
-					<Experience />
+					<Experience
+						value={experience}
+						updateExperience={updateExperience}
+					/>
 				</section>
-				<section className="experience">
-					<Education />
+				<section className="education">
+					<Education
+						value={education}
+						updateEducation={updateEducation}
+					/>
 				</section>
 			</form>
 			<h1>Resume</h1>
 			<p>Name entered in General Component: {name}</p>
+			<p>Name entered in Experience Component: {experience}</p>
+			<p>Name entered in Education Component: {education}</p>
 		</>
 	);
 }
