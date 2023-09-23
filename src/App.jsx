@@ -44,8 +44,11 @@ function App() {
 			</form>
 			<section className="resume-container">
 				<h1>Resume</h1>
+				<label htmlFor="name">Name: </label>
 				<p>{name}</p>
+				<label htmlFor="experience">Experience: </label>
 				<p>{experience}</p>
+				<label htmlFor="education">Education:</label>
 				<p>{education}</p>
 			</section>
 		</>
