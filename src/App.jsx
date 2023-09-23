@@ -2,6 +2,7 @@ import Education from "./components/Education";
 import Experience from "./components/Experience";
 import General from "./components/General";
 import { useState } from "react";
+import styles from "./styles/styles.css";
 
 function App() {
 	const [name, setName] = useState("");
@@ -23,8 +24,8 @@ function App() {
 
 	return (
 		<>
-			<h3>Fill in the fields to generate your resume:</h3>
 			<form>
+				<h3>Fill in the fields to generate your resume:</h3>
 				<section className="general">
 					<General value={name} updateName={updateName} />
 				</section>
@@ -41,10 +42,12 @@ function App() {
 					/>
 				</section>
 			</form>
-			<h1>Resume</h1>
-			<p>Name entered in General Component: {name}</p>
-			<p>Name entered in Experience Component: {experience}</p>
-			<p>Name entered in Education Component: {education}</p>
+			<section className="resume-container">
+				<h1>Resume</h1>
+				<p>{name}</p>
+				<p>{experience}</p>
+				<p>{education}</p>
+			</section>
 		</>
 	);
 }
