@@ -1,8 +1,8 @@
+import "./styles/styles.css";
 import Education from "./components/Education";
 import Experience from "./components/Experience";
 import General from "./components/General";
 import { useState } from "react";
-import styles from "./styles/styles.css";
 
 function App() {
 	const [name, setName] = useState("");
